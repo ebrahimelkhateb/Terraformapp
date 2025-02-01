@@ -132,7 +132,7 @@ resource "aws_security_group" "apache_sg" {
 
 # EC2 Instance in Private Subnet
 resource "aws_instance" "apache_ec2" {
-  ami             = "ami-0c55b159cbfafe1f0" # Change to latest AMI for your region
+  ami             = "ami-0c55b159cbfafe1f0"
   instance_type   = "t2.micro"
   subnet_id       = aws_subnet.private_subnet.id
   security_groups = [aws_security_group.apache_sg.id]
